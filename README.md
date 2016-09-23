@@ -31,8 +31,7 @@ Or
 ````javascript  
 request.exec({
   method: 'GET',
-  url: 'http://google.com',
-  headers: {'x-header-1': 'foo'},
+  url: 'http://google.com',  
 }).then((result) => {
   // ...
 })
