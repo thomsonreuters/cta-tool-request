@@ -8,6 +8,11 @@ const apiURL = 'http://api.compass.int.thomsonreuters.com/authorize/v1/userRoles
 
 co(function* coroutine() {
   let result;
+  result = yield request.exec({
+    method: 'HEAD',
+    url: apiURL + '?appId=demo&userId=U1',
+  });
+  console.log(result);
   result = yield request.get(apiURL + '?appId=demo&userId=U1');
   console.log(result);
   result = yield request.post(apiURL, {

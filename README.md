@@ -10,93 +10,120 @@ const Request = require('cta-tool-request');
 const request = new Request();
 ````
 
-### GET
+### Supported http methods
 
-````javascript
-request.get('http://google.com')
-  .then((result) => {
-    // result is an object with these fields
-    // - status: response status
-    // - type: response data type (ex. application/json, text/html...)
-    // - data: response data
-    // - headers: response headers
-  })
-  .catch((error) => {
-    // ...
-  })
+All http methods are supported and can be run via the main method "exec".
+
+Example:
+
+````javascript  
+request.exec({
+  method: 'HEAD',
+  url: 'http://api.compass.int.thomsonreuters.com/authorize/v1/userRoles?appId=demo&userId=U1',  
+}).then((result) => {
+  console.log(result);
+}).catch((error) => {
+  console.error(error);
+})
 ````
 
-Or
+Although, this module provide shortcuts to the most used methods: GET, POST, PUT, DELETE
+
+Example:
+
+````javascript  
+request.get('http://api.compass.int.thomsonreuters.com/authorize/v1/userRoles?appId=demo&userId=U1')
+.then((result) => {
+  console.log(result);
+}).catch((error) => {
+  console.error(error);
+})
+````
+
+## Response
+
+All exported methods are promises that resolve to an object with these fields:
+
+- status: response status
+- type: response data type (ex. application/json, text/html...)
+- data: response data
+- headers: response headers
+
+### More examples
+
+GET via exec method
 
 ````javascript  
 request.exec({
   method: 'GET',
-  url: 'http://google.com',  
+  url: 'http://domain.com',  
 }).then((result) => {
   // ...
 })
 ````
 
-Send some headers
+GET with some headers
 
 ````javascript
-request.get('http://google.com', {'x-header-1': 'foo'})
+request.get('http://domain.com', {'x-from': 'CTA'})
   .then((result) => {
   // ...
   })
 ````  
 
-Or 
+Or via exec
 
 ````javascript  
 request.exec({
   method: 'GET',
-  url: 'http://google.com',
-  headers: {'x-header-1': 'foo'},
+  url: 'http://domain.com',
+  headers: {'x-from': 'CTA'},
 }).then((result) => {
   // ...
 })
 ````
 
-### POST
+POST a body
 
 ````javascript
-request.post('http://google.com', {foo: 'bar'})
+request.post('http://domain.com', {foo: 'bar'})
   .then((result) => {
     // ...
   })  
 ````
 
-Or
+Or via exec
 
 ````javascript  
 request.exec({
   method: 'POST',
-  url: 'http://google.com',
+  url: 'http://domain.com',
   body: {foo: 'bar'},
 }).then((result) => {
   // ...
 })
 ````
 
-Send some headers
+POST with body and headers
 
 ````javascript
-request.post('http://google.com', {foo: 'bar'}, {'x-header-1': 'foo'})
+request.post('http://domain.com', {foo: 'bar'}, {'x-from': 'CTA'})
   .then((result) => {
   // ...
   })
 ````  
 
-Or 
+Or via exec
 
 ````javascript  
 request.exec({
   method: 'POST',
-  url: 'http://google.com',
+  url: 'http://domain.com',
   body: {foo: 'bar'},
-  headers: {'x-header-1': 'foo'},
+  headers: {'x-from': 'CTA'},
 }).then((result) => {
   // ...
 })
 ````
+
+Other http methods can be used in the same way... 
