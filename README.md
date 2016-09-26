@@ -27,7 +27,7 @@ request.exec({
 })
 ````
 
-Although, this module provide shortcuts to the most used methods: GET, POST, PUT, DELETE
+Although, this module provide shortcuts for the most used methods: GET, POST, PUT, DELETE
 
 Example:
 
