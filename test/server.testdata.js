@@ -9,7 +9,7 @@ server.start(() => {
   console.log('Started mock server');
 });
 
-['GET', 'POST', 'PUT', 'DELETE'].forEach((method) => {
+['GET', 'POST', 'PUT', 'DELETE', 'PATCH'].forEach((method) => {
   server.on({
     method: method,
     path: '/',

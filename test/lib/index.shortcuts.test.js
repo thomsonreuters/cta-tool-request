@@ -2,15 +2,25 @@
 
 const o = require('../common');
 
-describe('shortcuts', () => {
-  ['get', 'post', 'put', 'delete'].forEach((method) => {
-    it(method, (done) => {
+describe('shortcuts', function() {
+    let _exec;
+    beforeEach(function() {
+       _exec = o.sinon.stub(o.lib, 'exec', function() {
+           return Promise.resolve();
+       });
+    });
+    afterEach(function() {
+        _exec.restore();
+    });
+  ['get', 'post', 'put', 'delete', 'patch'].forEach((method) => {
+    it(method, function(done) {
       if (method === 'get') {
         o.lib[method](o.url)
           .then(() => {
-            o.sinon.assert.calledWith(o._exec, {
+            o.sinon.assert.calledWith(_exec, {
               method: method,
               url: o.url,
+              headers: undefined,
             });
             done();
           })
@@ -20,9 +30,10 @@ describe('shortcuts', () => {
       } else {
         o.lib[method](o.url, {foo: 'bar'})
           .then(() => {
-            o.sinon.assert.calledWith(o._exec, {
+            o.sinon.assert.calledWith(_exec, {
               method: method,
               url: o.url,
+              headers: undefined,
               body: {foo: 'bar'},
             });
             done();

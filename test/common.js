@@ -13,11 +13,11 @@ module.exports = {
   Lib: Lib,
   lib: lib,
   sinon: sinon,
-  _exec: sinon.spy(lib, 'exec'),
+  /*_exec: sinon.spy(lib, 'exec'),
   _get: sinon.spy(request, 'get'),
   _post: sinon.spy(request, 'post'),
   _put: sinon.spy(request, 'put'),
-  _delete: sinon.spy(request, 'delete'),
+  _delete: sinon.spy(request, 'delete'),*/
   server: require('./server.testdata'),
   url: 'http://localhost:9000',
 };
