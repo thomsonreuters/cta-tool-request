@@ -3,15 +3,15 @@
 const o = require('../common');
 
 describe('shortcuts', function() {
-    let _exec;
-    beforeEach(function() {
-       _exec = o.sinon.stub(o.lib, 'exec', function() {
-           return Promise.resolve();
-       });
+  let _exec;
+  beforeEach(function() {
+    _exec = o.sinon.stub(o.lib, 'exec', function() {
+      return Promise.resolve();
     });
-    afterEach(function() {
-        _exec.restore();
-    });
+  });
+  afterEach(function() {
+    _exec.restore();
+  });
   ['get', 'post', 'put', 'delete', 'patch'].forEach((method) => {
     it(method, function(done) {
       if (method === 'get') {

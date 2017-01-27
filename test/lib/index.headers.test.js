@@ -6,7 +6,7 @@ describe('headers', () => {
   it('get with some headers', (done) => {
     o.nock('http://localhost')
       .get('/')
-      .reply(function(uri, requestBody) {
+      .reply(function() {
         return [
           200,
           'ok',
