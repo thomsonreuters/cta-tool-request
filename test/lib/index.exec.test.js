@@ -10,7 +10,7 @@ describe('exec', () => {
     };
     o.lib.exec(params)
       .then((data) => {
-        console.log('data: ', data);
+        // console.log('data: ', data);
         // o.sinon.assert.calledOnce(o._get);
         o.assert.deepEqual(data.data, {method: 'GET'});
         done();
@@ -27,7 +27,7 @@ describe('exec', () => {
     };
     o.lib.exec(params)
       .then((data) => {
-        console.log('data: ', data);
+        // console.log('data: ', data);
         // o.sinon.assert.calledOnce(o._post);
         o.assert.deepEqual(data.data, {method: 'POST'});
         done();
@@ -44,7 +44,7 @@ describe('exec', () => {
     };
     o.lib.exec(params)
       .then((data) => {
-        console.log('data: ', data);
+        // console.log('data: ', data);
         // o.sinon.assert.calledOnce(o._put);
         o.assert.deepEqual(data.data, {method: 'PUT'});
         done();
@@ -61,7 +61,7 @@ describe('exec', () => {
     };
     o.lib.exec(params)
       .then((data) => {
-        console.log('data: ', data);
+        // console.log('data: ', data);
         // o.sinon.assert.calledOnce(o._delete);
         o.assert.deepEqual(data.data, {method: 'DELETE'});
         done();

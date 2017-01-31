@@ -6,7 +6,7 @@ const server = new ServerMock({
   port: 9000,
 });
 server.start(() => {
-  console.log('Started mock server');
+  // console.log('Started mock server');
 });
 
 ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'].forEach((method) => {
