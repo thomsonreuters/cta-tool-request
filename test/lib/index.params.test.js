@@ -8,8 +8,8 @@ describe('params', () => {
       .then(() => {
         done('should not be here');
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        // console.log(err);
         done();
       });
   });
@@ -21,8 +21,8 @@ describe('params', () => {
     .then(() => {
       done('should not be here');
     })
-    .catch((err) => {
-      console.log(err);
+    .catch(() => {
+      // console.log(err);
       done();
     });
   });

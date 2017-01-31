@@ -20,7 +20,7 @@ describe('headers', () => {
     };
     o.lib.exec(params)
       .then((data) => {
-        console.log('data: ', data);
+        // console.log('data: ', data);
         o.assert.strictEqual(data.data, 'ok');
         o.assert.strictEqual(data.headers.a, 1);
         o.assert.strictEqual(data.headers.b, 2);
