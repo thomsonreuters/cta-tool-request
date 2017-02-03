@@ -32,8 +32,8 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "cta-common": "git+ssh://git@git.sami.int.thomsonreuters.com:compass/cta-common.git",
-    "cta-tool": "git+ssh://git@git.sami.int.thomsonreuters.com:compass/cta-tool.git",
+    "cta-common": "git+ssh://git@git.sami.int.thomsonreuters.com:compass/cta-common.git#1.0.0",
+    "cta-tool": "git+ssh://git@git.sami.int.thomsonreuters.com:compass/cta-tool.git#1.0.0",
     "request": "~2.75.0",
     "superagent": "^2.3.0"
   }
