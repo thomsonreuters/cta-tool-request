@@ -1,9 +1,12 @@
-# CTA Request Tool
-------------------
+# cta-tool-request [ ![build status](https://git.sami.int.thomsonreuters.com/compass/cta-tool-request/badges/master/build.svg)](https://git.sami.int.thomsonreuters.com/compass/cta-tool-request/commits/master) [![coverage report](https://git.sami.int.thomsonreuters.com/compass/cta-tool-request/badges/master/coverage.svg)](https://git.sami.int.thomsonreuters.com/compass/cta-tool-request/commits/master)
 
-This is a request [Tool](https://git.sami.int.thomsonreuters.com/compass/cta-tool) for CTA to make http requests
+Request Modules for Compass Test Automation, One of Libraries in CTA-OSS Framework
 
-If you plan to use it in a [Flowcontrol](https://git.sami.int.thomsonreuters.com/compass/cta-flowcontrol) application, try to consider using the brick adapter of this tool [cta-brick-request](https://git.sami.int.thomsonreuters.com/compass/cta-brick-request) especially if you'd like to expose your http calls contracts in the configuration of your app
+## General Overview
+
+This modules provides the Request as [Tool](https://git.sami.int.thomsonreuters.com/compass/cta-tool) to make http requests.
+
+If you plan to use it in a [Flowcontrol](https://git.sami.int.thomsonreuters.com/compass/cta-flowcontrol) application, try to consider using the brick adapter of this tool [cta-brick-request](https://git.sami.int.thomsonreuters.com/compass/cta-brick-request) especially if you'd like to expose your http calls contracts in the configuration of your app.
 
 ## How to use it
 
