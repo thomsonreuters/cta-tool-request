@@ -7,19 +7,22 @@
   "scripts": {
     "test": "NODE_PATH=. _mocha",
     "codecoverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && codecov",
     "lint": "eslint --quiet lib test",
     "docs": "jsdoc --readme README.md lib -r -d docs && opener ./docs/index.html"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.sami.int.thomsonreuters.com:compass/cta-tool-request.git"
+    "url": "https://github.com/thomsonreuters/cta-tool-request.git"
   },
   "engines": {
-    "node": "6.9.4"
+    "node": ">=6"
   },
   "devDependencies": {
     "chai": "~3.4.0",
     "co": "^4.6.0",
+    "codecov": "^3.0.0",
+    "coveralls": "^3.0.0",
     "eslint": "^3.2.2",
     "eslint-config-cta": "^1.0.1",
     "istanbul": "~0.4.1",
@@ -32,9 +35,8 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@thomsonreuters/eslint-config-cta": "git+ssh://git@git.sami.int.thomsonreuters.com:compass/eslint-config-cta.git",
-    "cta-common": "git+ssh://git@git.sami.int.thomsonreuters.com:compass/cta-common.git#1.0.0",
-    "cta-tool": "git+ssh://git@git.sami.int.thomsonreuters.com:compass/cta-tool.git#1.0.0",
+    "cta-common": "thomsonreuters/cta-common#1.0.0",
+    "cta-tool": "thomsonreuters/cta-tool#1.0.0",
     "request": "~2.75.0",
     "superagent": "^2.3.0"
   }

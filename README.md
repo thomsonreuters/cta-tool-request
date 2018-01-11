@@ -1,4 +1,8 @@
-# cta-tool-request [ ![build status](https://git.sami.int.thomsonreuters.com/compass/cta-tool-request/badges/master/build.svg)](https://git.sami.int.thomsonreuters.com/compass/cta-tool-request/commits/master) [![coverage report](https://git.sami.int.thomsonreuters.com/compass/cta-tool-request/badges/master/coverage.svg)](https://git.sami.int.thomsonreuters.com/compass/cta-tool-request/commits/master)
+# cta-tool-request
+[![Build Status](https://travis-ci.org/thomsonreuters/cta-tool-request.svg?branch=master)](https://travis-ci.org/thomsonreuters/cta-tool-request)
+[![Coverage Status](https://coveralls.io/repos/github/thomsonreuters/cta-tool-request/badge.svg?branch=master)](https://coveralls.io/github/thomsonreuters/cta-tool-request?branch=master)
+[![codecov](https://codecov.io/gh/thomsonreuters/cta-tool-request/branch/master/graph/badge.svg)](https://codecov.io/gh/thomsonreuters/cta-tool-request)
+
 
 Request Modules for Compass Test Automation, One of Libraries in CTA-OSS Framework
 
